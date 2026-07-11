@@ -37,6 +37,12 @@ no analytics, binds to localhost by default) that:
    in your local timezone, so you can reconstruct the exact operating
    conditions around any error.
 
+It's also built to run unattended on an always-on box: restarts resume an
+open charging session seamlessly, downtime is recorded as an explicit
+"monitoring gap" event (even after hard reboots), and known firmware quirks —
+invalid-sensor 255 °C temperature sentinels, malformed JSON — are handled so
+they never masquerade as real data.
+
 ### Quick start
 
 ```bash
